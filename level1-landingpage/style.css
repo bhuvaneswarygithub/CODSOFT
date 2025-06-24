@@ -1,5 +1,7 @@
 :root{
     --teelblue:#0d4f75;
+    --white: #fff;
+    --brown: #4e342e;
 }
 *{
     margin:0; padding:0;
@@ -86,6 +88,21 @@ header .navbar a:hover{
     color:var(--teelblue);
 }
 
+
+header .navbar {
+    display: none; 
+    flex-direction: column;
+    background: #fff;
+    padding: 1rem;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    transition: clip-path 0.3s ease-in-out;
+}
+
+
+header .navbar.active {
+    display: flex;
+}
+
 header .icons a{
     font-size: 2.5rem;
     color:#0d4f75;
@@ -132,12 +149,6 @@ header .fa-bars{
     color: #fff;
 }
 
-.home .content span{
-    font-size: 3.5rem;
-    color:var(--white);
-    padding:1rem 0;
-    line-height: 1.5;
-}
 
 .home .content span{
     font-size: 1.5rem;
@@ -511,9 +522,7 @@ header .fa-bars{
         clip-path: polygon(0 0,100% 0,100% 0,0 0);
     }
 
-    header #toggler:checked ~ .navbar{
-        clip-path: polygon(0 0,100% 0,100% 100%,0% 100%);
-    }
+
 
     header .navbar a{
         margin:1.5rem;
@@ -528,10 +537,6 @@ header .fa-bars{
     font-size: 5rem;
 }
 
-.home .content span{
-    font-size:2.5rem;
-}
-
 .icons-container .icons h3{
     font-size: 2rem;
  }
@@ -541,12 +546,12 @@ header .fa-bars{
  }
 
 @media (max-width:450px){
-    html{                
+    html{
         font-size: 50%;
     }
 
 
-    heading{
+    .heading{
         font-size: 3rem;
     }
 }
