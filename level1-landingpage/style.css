@@ -541,7 +541,7 @@ header .fa-bars{
  }
 
 @media (max-width:450px){
-    html{
+    html{                
         font-size: 50%;
     }
 
